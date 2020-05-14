@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+body nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+body nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body nav ul li.five {
+  border-radius: 0 0 10px 0;
+}
+body nav ul li.one {
+  border-radius: 0 10px 0 0;
+}
+body nav ul li.five:hover {
+  border-radius: 0;
+}
+body nav ul li.five:hover a {
+  margin-left: -5px;
+}
+body nav ul li.four:hover a {
+  margin-left: -20px;
+}
+body nav ul li.three:hover a {
+  margin-left: 0px;
+}
+body nav ul li.two:hover a {
+  margin-left: -20px;
+}
+body nav ul li.one:hover {
+  border-radius: 0;
+}
+body nav ul li.one:hover a {
+  margin-left: -30px;
+}
+body nav ul li {
+  background-color: #A75813;
+  text-align: right;
+  transition: 0.5s;
+  display: inline-block;
+}
+body nav ul li li:hover a {
+  margin-left: 0;
+}
+body nav ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  width: 120px;
+  margin-left: -84px;
+  transition: 0.4s;
+}
+body nav ul li a i {
+  padding: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

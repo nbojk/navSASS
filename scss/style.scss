@@ -1,0 +1,87 @@
+$primary_color: #A75813;
+$secondary_color: #fff;
+
+@mixin size($x) {
+    width: $x;
+}
+
+@mixin marLeft($m) {
+    margin-left: $m;
+}
+
+@mixin borRad($b) {
+    border-radius: $b;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    nav {
+        position: absolute;
+        left: 0;
+        top: 0;
+        ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            li.five {
+                @include borRad(0 0 10px 0);
+            }
+            li.one {
+                @include borRad(0 10px 0 0);
+            }
+            li.five:hover {
+                @include borRad(0);
+                a {
+                    @include marLeft(-5px);
+                }
+            }
+            li.four:hover {
+                a {
+                    @include marLeft(-20px);
+                }
+            }
+            li.three:hover {
+                a {
+                    @include marLeft(0px);
+                }
+            }
+            li.two:hover {
+                a {
+                    @include marLeft(-20px);
+                }
+            }
+            li.one:hover {
+                @include borRad(0);
+                a {
+                    @include marLeft(-30px);
+                }
+            }
+            li {
+                background-color: $primary_color;
+                text-align: right;
+                transition: .5s;
+                display: inline-block;
+                li:hover{
+                    a {
+                        @include marLeft(0);
+                    }
+                }
+                a {
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: $secondary_color;
+                    display: inline-block;
+                    @include size(120px);
+                    @include marLeft(-84px);
+                    transition: .4s;
+                    i {
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
