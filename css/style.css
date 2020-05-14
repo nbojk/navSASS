@@ -8,11 +8,23 @@ body nav {
   top: 0;
 }
 body nav ul {
+  font-family: "DM Mono", monospace;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: space-between;
+}
+body nav ul li {
+  background-color: #A75813;
+  text-align: right;
+  transition: 0.5s;
+  display: inline-block;
+}
+body nav ul li:hover {
+  margin-left: 0;
 }
 body nav ul li.five {
   border-radius: 0 0 10px 0;
@@ -40,15 +52,6 @@ body nav ul li.one:hover {
 }
 body nav ul li.one:hover a {
   margin-left: -30px;
-}
-body nav ul li {
-  background-color: #A75813;
-  text-align: right;
-  transition: 0.5s;
-  display: inline-block;
-}
-body nav ul li li:hover a {
-  margin-left: 0;
 }
 body nav ul li a {
   text-transform: uppercase;

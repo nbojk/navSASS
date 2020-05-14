@@ -21,52 +21,54 @@ body {
         left: 0;
         top: 0;
         ul {
+            font-family: 'DM Mono', monospace;
+            margin: 0;
+            padding: 0;
             list-style-type: none;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             flex-direction: column;
             justify-content: space-between;
-            li.five {
-                @include borRad(0 0 10px 0);
-            }
-            li.one {
-                @include borRad(0 10px 0 0);
-            }
-            li.five:hover {
-                @include borRad(0);
-                a {
-                    @include marLeft(-5px);
-                }
-            }
-            li.four:hover {
-                a {
-                    @include marLeft(-20px);
-                }
-            }
-            li.three:hover {
-                a {
-                    @include marLeft(0px);
-                }
-            }
-            li.two:hover {
-                a {
-                    @include marLeft(-20px);
-                }
-            }
-            li.one:hover {
-                @include borRad(0);
-                a {
-                    @include marLeft(-30px);
-                }
-            }
+           
             li {
                 background-color: $primary_color;
                 text-align: right;
                 transition: .5s;
                 display: inline-block;
-                li:hover{
+                &:hover {
+                    @include marLeft(0);
+                }
+                &.five {
+                    @include borRad(0 0 10px 0);
+                }
+                &.one {
+                    @include borRad(0 10px 0 0);
+                }
+                &.five:hover {
+                    @include borRad(0);
                     a {
-                        @include marLeft(0);
+                        @include marLeft(-5px);
+                    }
+                }
+                &.four:hover {
+                    a {
+                        @include marLeft(-20px);
+                    }
+                }
+                &.three:hover {
+                    a {
+                        @include marLeft(0px);
+                    }
+                }
+                &.two:hover {
+                    a {
+                        @include marLeft(-20px);
+                    }
+                }
+                &.one:hover {
+                    @include borRad(0);
+                    a {
+                        @include marLeft(-30px);
                     }
                 }
                 a {
